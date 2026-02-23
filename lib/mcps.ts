@@ -7,7 +7,7 @@ export const mcpRegistry: MCPConfig[] = [
     name: 'Stripe MCP',
     category: 'payments',
     npmPackage: '@stripe/mcp',
-    githubRepo: 'stripe/stripe-mcp',
+    githubRepo: 'stripe/ai', // monorepo containing @stripe/mcp
     description: 'Official Stripe MCP server',
     website: 'https://mcp.stripe.com',
   },
@@ -16,14 +16,14 @@ export const mcpRegistry: MCPConfig[] = [
     name: 'Stripe Agent Toolkit',
     category: 'payments',
     npmPackage: '@stripe/agent-toolkit',
-    githubRepo: 'stripe/agent-toolkit',
+    githubRepo: 'stripe/ai', // was renamed from stripe/agent-toolkit
     description: 'LangChain/Vercel AI SDK integration',
   },
   {
     id: 'paypal-mcp',
     name: 'PayPal MCP',
     category: 'payments',
-    npmPackage: '@anthropic/paypal-mcp',
+    npmPackage: '@paypal/mcp', // was incorrectly @anthropic/paypal-mcp
     githubRepo: 'paypal/agent-toolkit',
     description: 'PayPal agent toolkit',
   },
@@ -32,7 +32,7 @@ export const mcpRegistry: MCPConfig[] = [
     name: 'Square MCP',
     category: 'payments',
     npmPackage: null,
-    githubRepo: 'square/square-mcp',
+    githubRepo: 'square/square-mcp-server', // was incorrectly square/square-mcp
     description: 'Square payments MCP',
   },
 
@@ -42,7 +42,7 @@ export const mcpRegistry: MCPConfig[] = [
     name: 'Shopify Dev MCP',
     category: 'commerce',
     npmPackage: '@shopify/dev-mcp',
-    githubRepo: 'Shopify/dev-mcp',
+    githubRepo: null, // closed source - no public repo
     description: 'Official Shopify developer MCP',
   },
   {
@@ -50,7 +50,7 @@ export const mcpRegistry: MCPConfig[] = [
     name: 'Shopify MCP',
     category: 'commerce',
     npmPackage: 'shopify-mcp',
-    githubRepo: null,
+    githubRepo: 'GeLi2001/shopify-mcp', // from npm repository field
     description: 'Community Shopify MCP',
   },
   {
@@ -76,7 +76,7 @@ export const mcpRegistry: MCPConfig[] = [
     name: 'x402 MCP',
     category: 'crypto',
     npmPackage: 'x402-mcp',
-    githubRepo: null,
+    githubRepo: 'ethanniser/x402-mcp', // from npm repository field
     description: 'Vercel x402 protocol integration',
   },
   {
@@ -86,14 +86,6 @@ export const mcpRegistry: MCPConfig[] = [
     npmPackage: 'mcpay',
     githubRepo: 'microchipgnu/MCPay',
     description: 'x402 payment infrastructure',
-  },
-  {
-    id: 'armor-crypto-mcp',
-    name: 'Armor Crypto MCP',
-    category: 'crypto',
-    npmPackage: 'armor-crypto-mcp',
-    githubRepo: null,
-    description: 'Cross-chain swaps',
   },
   {
     id: 'coingecko-mcp',
@@ -107,7 +99,7 @@ export const mcpRegistry: MCPConfig[] = [
     id: 'hive-crypto-mcp',
     name: 'Hive Intelligence',
     category: 'crypto',
-    npmPackage: 'hive-crypto-mcp',
+    npmPackage: null, // hive-crypto-mcp doesn't exist on npm
     githubRepo: 'hive-intel/hive-crypto-mcp',
     description: 'DeFi analytics',
   },
@@ -115,7 +107,7 @@ export const mcpRegistry: MCPConfig[] = [
     id: 'near-mcp',
     name: 'NEAR MCP',
     category: 'crypto',
-    npmPackage: 'near-mcp',
+    npmPackage: '@nearai/near-mcp', // was incorrectly near-mcp
     githubRepo: 'nearai/near-mcp',
     description: 'NEAR blockchain integration',
   },
@@ -123,8 +115,8 @@ export const mcpRegistry: MCPConfig[] = [
     id: 'coinbase-cdp',
     name: 'Coinbase CDP',
     category: 'crypto',
-    npmPackage: null,
-    githubRepo: 'coinbase/cdp-mcp',
+    npmPackage: '@coinbase/agentkit-model-context-protocol',
+    githubRepo: 'coinbase/agentkit', // monorepo for agentkit packages
     description: 'Coinbase Developer Platform MCP',
   },
 ];
